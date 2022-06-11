@@ -1,0 +1,18 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.mensaje {
+    background-color: rgb(217, 38, 38);
+    border-radius: .5rem;
+    color: v.$white;
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span{
+        font-size: 3rem;
+        margin-right: 2rem;
+    }
+}
