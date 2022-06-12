@@ -9,9 +9,10 @@
     justify-content: center;
     padding: 3rem;
     margin: 0 auto;
+    width: 90%;
 
-    @include m.tablet {
-        width: 70%;
+    @include m.desktop {
+        width: auto;
     }
 }
 

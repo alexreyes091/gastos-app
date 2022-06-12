@@ -2,7 +2,8 @@
 @use '../base/mixins' as m;
 
 .content{
-    padding: 2rem;
+    padding: none;
+
     @include m.tablet {
         margin-left: 250px;
     }

@@ -1,9 +1,10 @@
 import { useState } from 'react';
-
 // Mis componentes
 import Dashboard from "./components/Dashboard";
 import { DatosPresupuesto } from './components/DatosPresupuesto';
 import Sidebar from "./components/Sidebar";
+// Otros
+import 'animate.css';
 
 function App() {
 

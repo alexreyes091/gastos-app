@@ -2,6 +2,7 @@ import { useState } from 'react';
 // Mis componentes
 import Mensaje from './Mensaje';
 import NuevoPresupuesto from './NuevoPresupuesto';
+import ControlPresupuesto from './ControlPresupuesto';
 // Mis imagenes
 import IconoDinero from '../img/icono_dinero.svg';
 
@@ -22,10 +23,10 @@ const Dashboard = ({
             {/* Informacion al usuario sobre el presupuesto establecido */}
 
             { isValidPresupuesto ? (
-                <p>Presupuesto vallido: {presupuesto}</p>
+                <ControlPresupuesto/>
 
             ) : (
-                <div className="dashboard__content">
+                <div className="dashboard__content animate__animated animate__fadeIn">
                     <NuevoPresupuesto
                         presupuesto={presupuesto}
                         setPresupuesto={setPresupuesto}
