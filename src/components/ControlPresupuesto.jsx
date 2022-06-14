@@ -1,12 +1,16 @@
 import IconoGRafica from '../img/icono_grafica.svg';
+import { formatCantidad } from '../helpers/formatCantidad';
 
-const ControlPresupuesto = () => {
+const ControlPresupuesto = ({presupuesto, setPresupuesto}) => {
+
     return (
         <>
             <div className='control'>
                 <div className="control__presupuesto animate__animated animate__fadeIn">
                     <div className="control__presupuesto-body">
-                        <p>Saldo actual: <br /> <span> $ 200</span></p>
+                        <p>Presupuesto: <br /> <span> {formatCantidad(presupuesto)}</span></p>
+                        <p>Disponible: <br /> <span> {formatCantidad(0)}</span></p>
+                        <p>Gasto: <br /> <span> {formatCantidad(0)}</span></p>
                     </div>
                     <div className="control__presupuesto-img">
                         <img src={ IconoGRafica} alt="imagen grafica" />

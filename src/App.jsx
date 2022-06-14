@@ -3,8 +3,10 @@ import { useState } from 'react';
 import Dashboard from "./components/Dashboard";
 import { DatosPresupuesto } from './components/DatosPresupuesto';
 import Sidebar from "./components/Sidebar";
+import Modal from './components/Modal';
 // Otros
 import 'animate.css';
+import IconoNuevoGasto from './img/nuevo-gasto.svg';
 
 function App() {
 
@@ -12,6 +14,12 @@ function App() {
   const [isValidPresupuesto, setIsValidPresupuesto] = useState(false);
   const [isDashboardActive, setIsDashboardActive] = useState(true);
   const [isPresupuestoActive, setIsPresupuestoActive] = useState(false);
+
+  const [modal, setModal] = useState(false);
+
+  const handleNuevoGasto = () => {
+    setModal(!modal);
+  }
 
   return (
     <>
@@ -21,17 +29,30 @@ function App() {
       />
       <div className="content">
         {isDashboardActive && <Dashboard
-                                  presupuesto={presupuesto}
-                                  setPresupuesto={setPresupuesto}
-                                  isValidPresupuesto={isValidPresupuesto}
-                                  setIsValidPresupuesto={setIsValidPresupuesto}
-                              />
+          presupuesto={presupuesto}
+          setPresupuesto={setPresupuesto}
+          isValidPresupuesto={isValidPresupuesto}
+          setIsValidPresupuesto={setIsValidPresupuesto}
+        />
         }
-        {isPresupuestoActive && <DatosPresupuesto
+        {isPresupuestoActive && <DatosPresupuesto/>}
 
-                                />
-        }
-      </div>
+        {isValidPresupuesto && (
+          <div className="nuevo-gasto">
+            <img
+              src={IconoNuevoGasto}
+              alt="icono nuevo gasto"
+              onClick={handleNuevoGasto}
+            />
+          </div>
+        )}
+
+        {modal && <Modal 
+          setModal={setModal}
+        />}
+
+
+        </div>
     </>
   )
 }

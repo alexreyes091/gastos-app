@@ -18,7 +18,6 @@ const NuevoPresupuesto = ({
         setIsValidPresupuesto(true);
 
         setPresupuesto(presupuesto);
-
     }
 
     return (

@@ -23,7 +23,10 @@ const Dashboard = ({
             {/* Informacion al usuario sobre el presupuesto establecido */}
 
             { isValidPresupuesto ? (
-                <ControlPresupuesto/>
+                <ControlPresupuesto 
+                    presupuesto={presupuesto}
+                    setPresupuesto={setPresupuesto}
+                />
 
             ) : (
                 <div className="dashboard__content animate__animated animate__fadeIn">

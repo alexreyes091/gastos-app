@@ -1,0 +1,16 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.nuevo-gasto {
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+
+    img {
+        width: 5rem;
+    }
+
+    img:hover {
+        cursor: pointer;
+    }
+}
