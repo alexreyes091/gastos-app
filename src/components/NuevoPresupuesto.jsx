@@ -24,7 +24,7 @@ const NuevoPresupuesto = ({
         <form onSubmit={handlePresupuesto} className="form">
             <div className="campo">
                 <label className="campo__title">Controla tus finanzas</label>
-                <span>Define tu presupuesto inicial, y lleva un mejor control en tus finanzas.</span>
+                <span>Define tu presupuesto inicial, y lleva un mejor control en tus finanzas, con <span className='campo__title-app'>Gastos App</span> puedes revisar tus estadisticas de consumo, y jamas perder el control de nuevo.</span>
                 <input
                     className="campo__input"
                     type="number"

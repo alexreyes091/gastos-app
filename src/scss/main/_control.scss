@@ -10,23 +10,33 @@
         background-color: v.$gray;
         border-radius: .5rem;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
         margin: 1rem;
-        padding: 3rem;
+        padding: 1.5rem;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
 
         @include m.tablet {
-            flex-direction: row;
             gap: 3rem;
+            padding: 3rem;
             justify-content: center;
+            // align-items: center;
         }
 
         &-body{
             p {
-                font-weight: 700;
-                font-size: 2.5rem;
+                font-weight: 400;
+                font-size: 1.5rem;
+                align-items: flex-end;
                 color: v.$gray-darken;
+            }
+
+            @include m.tablet {
+                p {
+                    font-weight: 700;
+                    font-size: 2.5rem;
+                    color: v.$gray-darken;
+                }
             }
 
             span {
