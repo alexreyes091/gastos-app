@@ -10,7 +10,7 @@ const ControlPresupuesto = ({presupuesto, setPresupuesto}) => {
                     <div className="control__presupuesto-body">
                         <p>Presupuesto: <br /> <span> {formatCantidad(presupuesto)}</span></p>
                         <p>Disponible: <br /> <span> {formatCantidad(0)}</span></p>
-                        <p>Gasto: <br /> <span> {formatCantidad(0)}</span></p>
+                        <p>Gastado: <br /> <span> {formatCantidad(0)}</span></p>
                     </div>
                     <div className="control__presupuesto-img">
                         <img src={ IconoGRafica} alt="imagen grafica" />

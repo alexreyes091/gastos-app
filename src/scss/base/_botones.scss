@@ -7,3 +7,11 @@
 .boton-negro {
     @include m.boton(v.$black, v.$white);
 }
+
+.btn-gray {
+    @include m.boton(v.$white, v.$black);
+}
+
+.btn-gray:hover {
+    background-color: v.$gray-darken;
+}
