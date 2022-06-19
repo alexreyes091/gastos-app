@@ -2,10 +2,11 @@
 @use '../base/mixins' as m;
 
 .mensaje {
-    background-color: rgb(217, 38, 38);
+    background-color: rgb(223, 75, 39);
     border-radius: .5rem;
     color: v.$white;
-    padding: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 
     display: flex;
     justify-content: center;

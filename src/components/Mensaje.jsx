@@ -1,11 +1,11 @@
 // Iconos
-import { VscError } from "react-icons/vsc";
+import { VscInfo } from "react-icons/vsc";
 
 const Mensaje = ({ children }) => {
     return (
         <>
             <div className='mensaje'>
-                <span><VscError /></span>
+                <span><VscInfo /></span>
                 <p>{ children }</p>
             </div>
         </>
