@@ -54,10 +54,12 @@
                 border-radius: 1rem;
                 text-align: center;
                 background-color: v.$white;
+
             }
 
             option {
-                text-transform: uppercase;
+                color: v.$secondary;
+                font-weight: 700;
             }
         }
 

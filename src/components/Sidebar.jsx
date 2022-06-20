@@ -33,7 +33,7 @@ const Sidebar = ({ setIsDashboardActive, setIsPresupuestoActive} ) => {
                     className="sidebar__menu-item"
                 >
                     <span><VscProject/></span>
-                    Presupuesto
+                    Resumen
                 </li>
                 <li className="sidebar__menu-item"><span><VscChecklist/></span> Categorias</li>
             </ul>

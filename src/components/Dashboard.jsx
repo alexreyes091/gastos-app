@@ -8,6 +8,7 @@ import IconoDinero from '../img/icono_dinero.svg';
 
 const Dashboard = ({
         presupuesto,
+        gastos,
         setPresupuesto,
         isValidPresupuesto,
         setIsValidPresupuesto, }) => {
@@ -23,10 +24,12 @@ const Dashboard = ({
             {/* Informacion al usuario sobre el presupuesto establecido */}
 
             { isValidPresupuesto ? (
-                <ControlPresupuesto 
-                    presupuesto={presupuesto}
-                    setPresupuesto={setPresupuesto}
-                />
+                <>
+                    <ControlPresupuesto
+                        presupuesto={presupuesto}
+                        gastos={gastos}
+                    />
+                </>
 
             ) : (
                 <div className="dashboard__content animate__animated animate__fadeIn">

@@ -29,18 +29,20 @@ function App() {
 
   const guardarGasto = (gasto) => {
     gasto.id = generarId();
+    gasto.fecha = Date.now();
     setGastos([...gastos, gasto]);
   }
 
   return (
-    <>
+    <div className={modal ? 'fijar' : ''}>
       <Sidebar
         setIsDashboardActive={setIsDashboardActive}
         setIsPresupuestoActive={setIsPresupuestoActive}
       />
-      <div className="content">
+      <div className="content" >
         {isDashboardActive && <Dashboard
           presupuesto={presupuesto}
+          gastos={gastos}
           setPresupuesto={setPresupuesto}
           isValidPresupuesto={isValidPresupuesto}
           setIsValidPresupuesto={setIsValidPresupuesto}
@@ -64,10 +66,8 @@ function App() {
           setAnimarModal={setAnimarModal}
           guardarGasto={guardarGasto}
         />}
-
-
         </div>
-    </>
+    </div>
   )
 }
 

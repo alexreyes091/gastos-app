@@ -8,7 +8,6 @@ const Modal = ({ setModal, animarModal, setAnimarModal, guardarGasto }) => {
     const [descripcion, setDescripcion] = useState('');
     const [cantidad, setCantidad] = useState('');
     const [categoria, setCategoria] = useState('');
-    
 
     const ocultarModal = () => {
         setAnimarModal(false);
@@ -34,6 +33,8 @@ const Modal = ({ setModal, animarModal, setAnimarModal, guardarGasto }) => {
             cantidad,
             categoria
         });
+
+        ocultarModal();
     }
 
     return (
@@ -90,13 +91,13 @@ const Modal = ({ setModal, animarModal, setAnimarModal, guardarGasto }) => {
                         onChange={e => setCategoria(e.target.value)}
                     >
                         <option value="">-- Seleccione --</option>
-                        <option value="ahorro">Ahorros</option>
-                        <option value="comida">Comida</option>
-                        <option value="hogar">Hogar</option>
-                        <option value="salud">Salud</option>
-                        <option value="suscripciones">Suscripciones</option>
-                        <option value="transporte">Transporte</option>
-                        <option value="gastos">Gastos Varios</option>
+                        <option value="Ahorro">Ahorros</option>
+                        <option value="Comida">Comida</option>
+                        <option value="Hogar">Hogar</option>
+                        <option value="Salud">Salud</option>
+                        <option value="Ocio">Ocio</option>
+                        <option value="Suscripciones">Suscripciones</option>
+                        <option value="Gastos">Gastos Varios</option>
                     </select>
 
                     <input

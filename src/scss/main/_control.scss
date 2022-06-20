@@ -6,6 +6,24 @@
         @include m.grid(2,1 );
     }
 
+    &-gastado,
+    &-disponible,
+    &-presupuesto {
+        font-family: v.$numberFont;
+    }
+
+    &-gastado {
+        color: red;
+    }
+
+    &-disponible {
+        color: v.$alternative;
+    }
+
+    &-presupuesto {
+        color: v.$secondary;
+    }
+
     &__presupuesto{
         background-color: v.$gray;
         border-radius: .5rem;
@@ -38,11 +56,6 @@
                     color: v.$gray-darken;
                 }
             }
-
-            span {
-                font-family: v.$numberFont;
-                color: v.$alternative
-            }
         }
         &-img{
             width: 40%;
@@ -52,3 +65,4 @@
         }
     }
 }
+

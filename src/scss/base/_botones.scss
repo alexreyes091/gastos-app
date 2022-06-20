@@ -4,6 +4,14 @@
 .btn {
     @include m.boton(v.$white, v.$black);
 }
+
+.btn-primary {
+    @include m.boton(v.$secondary, v.$white);
+}
+
+.btn-danger {
+    @include m.boton(rgb(241, 49, 49), v.$white);
+}
 .boton-negro {
     @include m.boton(v.$black, v.$white);
 }

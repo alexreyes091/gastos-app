@@ -7,8 +7,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
-        width: 250px;
+        gap: 1.5rem;
+        width: 210px;
         height: 100%;
         position: fixed;
         overflow: auto;
@@ -49,7 +49,7 @@
             cursor: pointer;
 
             span{
-                color: v.$secondary;
+                color: v.$primary;
             }
         }
     }
