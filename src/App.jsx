@@ -40,9 +40,29 @@ function App() {
   }
 
   const guardarGasto = (gasto) => {
-    gasto.id = generarId();
-    gasto.fecha = Date.now();
-    setGastos([...gastos, gasto]);
+    if(gasto.id) {
+      const gastosActualizados = gastos.map( gastoState => gastoState.id === gasto.id
+          ? gasto
+          : gastoState);
+
+      setGastos(gastosActualizados);
+
+    } else {
+      gasto.id = generarId();
+      gasto.fecha = Date.now();
+      setGastos([...gastos, gasto]);
+    }
+    setAnimarModal(false);
+
+    setTimeout(() => {
+      setModal(false);
+    }, 500);
+    
+  }
+
+  const eliminarGasto = (id) => {
+    const gastosActualizados = gastos.filter( gastos => gastos.id !== id);
+    setGastos(gastosActualizados);
   }
 
   return (
@@ -59,6 +79,7 @@ function App() {
           isValidPresupuesto={isValidPresupuesto}
           setIsValidPresupuesto={setIsValidPresupuesto}
           setGastosEditar={setGastoEditar}
+          eliminarGasto={eliminarGasto}
         />
         }
         {isPresupuestoActive && <DatosPresupuesto/>}

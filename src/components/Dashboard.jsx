@@ -13,6 +13,7 @@ const Dashboard = ({
         isValidPresupuesto,
         setIsValidPresupuesto,
         setGastosEditar,
+        eliminarGasto,
     }) => {
 
     const [mensaje, setMensaje] = useState('');
@@ -31,6 +32,7 @@ const Dashboard = ({
                         presupuesto={presupuesto}
                         gastos={gastos}
                         setGastosEditar={setGastosEditar}
+                        eliminarGasto={eliminarGasto}
                     />
                 </>
 

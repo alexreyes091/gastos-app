@@ -16,6 +16,7 @@ const Modal = ({
     const [descripcion, setDescripcion] = useState('');
     const [cantidad, setCantidad] = useState('');
     const [categoria, setCategoria] = useState('');
+    const [fecha, setFecha] = useState('');
     const [id, setId] = useState()
 
     useEffect(() => {
@@ -24,6 +25,7 @@ const Modal = ({
             setCantidad(gastoEditar.cantidad);
             setCategoria(gastoEditar.categoria);
             setId(gastoEditar.id);
+            setFecha(gastoEditar.fecha);
         }
     }, []);
     
@@ -52,7 +54,8 @@ const Modal = ({
             descripcion,
             cantidad,
             categoria,
-            id
+            id,
+            fecha,
         });
 
         ocultarModal();
@@ -104,7 +107,7 @@ const Modal = ({
                 <div className="modal-formulario__campo">
                     <label
                         htmlFor='categoria'
-                    >Cantidad</label>
+                    >Categoria</label>
 
                     <select
                         id="categoria"

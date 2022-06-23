@@ -8,6 +8,7 @@ const ControlPresupuesto = ({
         presupuesto,
         gastos,
         setGastosEditar,
+        eliminarGasto,
     }) => {
 
     const [disponible, setDisponible] = useState(0);
@@ -44,6 +45,7 @@ const ControlPresupuesto = ({
                 <ListadoGastos
                     gastos={gastos}
                     setGastosEditar={setGastosEditar}
+                    eliminarGasto={eliminarGasto}
                 />
             </main>
         </>
