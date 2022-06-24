@@ -21,11 +21,11 @@ function App() {
   const [isValidPresupuesto, setIsValidPresupuesto] = useState(false);
   const [isDashboardActive, setIsDashboardActive] = useState(true);
   const [isPresupuestoActive, setIsPresupuestoActive] = useState(false);
-
   const [modal, setModal] = useState(false);
   const [animarModal, setAnimarModal] = useState(false);
-
   const [gastoEditar, setGastoEditar] = useState({});
+  const [filtro, setFiltro] = useState('');
+  const [filtroGastos, setFiltroGastos] = useState([]);
 
   useEffect(() => {
     const presupuestoToLS =     Number(localStorage.getItem('presupuesto') ?? 0);
@@ -38,7 +38,7 @@ function App() {
   useEffect(() => {
     localStorage.setItem('gastos', JSON.stringify(gastos) ?? {});
   }, [gastos])
-  
+
   useEffect(() => {
     if(Object.keys(gastoEditar).length > 0){
       setModal(!modal);
@@ -50,8 +50,15 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem('presupuesto', presupuesto ?? 0);
-  }, [presupuesto])
-  
+  }, [presupuesto]);
+
+  useEffect(() => {
+    if(filtro) {
+      const gastosFiltrados = gastos.filter(gasto => gasto.categoria === filtro);
+      setFiltroGastos(gastosFiltrados);
+    }
+  }, [filtro, gastos])
+
 
   const handleNuevoGasto = () => {
     setGastoEditar({});
@@ -80,7 +87,6 @@ function App() {
     setTimeout(() => {
       setModal(false);
     }, 500);
-    
   }
 
   const eliminarGasto = (id) => {
@@ -107,7 +113,13 @@ function App() {
           setPorcentaje={setPorcentaje}
         />
         }
-        {isPresupuestoActive && <DatosPresupuesto/>}
+        {isPresupuestoActive && <DatosPresupuesto
+          gastos={gastos}
+          presupuesto={presupuesto}
+          filtro={filtro}
+          setFiltro={setFiltro}
+          filtroGastos={filtroGastos}
+        />}
 
         {isValidPresupuesto && (
           <div className="nuevo-gasto">
