@@ -29,9 +29,9 @@ const Modal = ({
         }
     }, []);
     
-
     const ocultarModal = () => {
         setAnimarModal(false);
+        setGastoEditar({});
         setTimeout(() => {
             setModal(false);
             setGastoEditar({});
@@ -88,7 +88,7 @@ const Modal = ({
                         placeholder="Detalle el nuevo gasto"
                         value={descripcion}
                         onChange={e => setDescripcion(e.target.value)}
-                        />
+                    />
                 </div>
 
                 <div className="modal-formulario__campo">

@@ -1,0 +1,9 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+.registro {
+    margin: 2rem;
+    &__grafica {
+        width: 200px;
+    }
+}

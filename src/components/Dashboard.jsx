@@ -14,13 +14,15 @@ const Dashboard = ({
         setIsValidPresupuesto,
         setGastosEditar,
         eliminarGasto,
+        porcentaje,
+        setPorcentaje,
     }) => {
 
     const [mensaje, setMensaje] = useState('');
 
     return (
         <div className="dashboard contenedor">
-            <h1 className="dashboard__title">Planificador de Gastos</h1>
+            <h1 className="dashboard__title">Control de Gastos</h1>
             <hr />
 
             {mensaje && <Mensaje> {mensaje} </Mensaje>}
@@ -33,6 +35,8 @@ const Dashboard = ({
                         gastos={gastos}
                         setGastosEditar={setGastosEditar}
                         eliminarGasto={eliminarGasto}
+                        porcentaje={porcentaje}
+                        setPorcentaje={setPorcentaje}
                     />
                 </>
 

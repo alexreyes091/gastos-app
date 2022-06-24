@@ -6,16 +6,20 @@
     border-radius: .5rem;
     color: v.$gray-darken;
     background-color: v.$gray;
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    cursor: pointer;
 
     &-titulo {
         color: v.$secondary;
+        background-color: v.$gray;
         font-size: 2.5rem;
-        margin: 1rem;
+        margin: 1rem 0;
+        border-radius: .5rem;
+        padding: 2rem;
     }
 
     &-imagen {
